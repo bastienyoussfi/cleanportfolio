@@ -5,7 +5,7 @@ import * as fiber from '@react-three/fiber'
 import Home from '../Sections/Home'
 import Navigation from '../Components/Navigation'
 import Projects from '../Sections/Projects'
-import About from '../Sections/About'
+import Contact from '../Sections/Contact'
 import Blog from '../Sections/Blog'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -30,7 +30,7 @@ export default function Homepage() {
                     </ShaderGradient>
                 </ShaderGradientCanvas>
             </div>
-            <div className='flex justify-between relative'>
+            <div className='flex justify-between relative select-none'>
                 <div className='flex flex-col ml-8 mt-8 opacity-80'>
                     <div className='font-extralight text-6xl select-none'>
                         Bastien Youssfi
@@ -45,7 +45,7 @@ export default function Homepage() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/projects" element={<Projects />} />
-                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
                     <Route path="/blog" element={<Blog />} />
                 </Routes>
             </div>
