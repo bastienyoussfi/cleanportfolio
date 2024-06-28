@@ -16,7 +16,6 @@ export default function App() {
           <div className="text-[11px] text-[#F2F2F2] opacity-50 font-medium leading-5 select-none">
           Reproduction, reposting or modification of the content of this site is prohibited.
           </div>
-          {/* Add the rest of your text here */}
         </div>
     </div>
   )

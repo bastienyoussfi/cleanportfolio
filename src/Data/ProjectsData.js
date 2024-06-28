@@ -1,0 +1,15 @@
+const ProjectsData = [
+    { id: 1, link: "", skills: ['visualstudio', 'gpt', 'flask', 'react', 'tailwind', 'pytorch'], title: "LLMs Collective Intelligence", date: "Mar.2024", description: "..."},
+    { id: 2, link: "", skills: ['cpp', 'visualstudio', 'github', 'express'], title: "2D Physics Engine", date: "Feb.2024", description: "Developed a robust 2D physics engine in C++ capable of simulating realistic physical interactions in a two-dimensional space. The engine supports various physical phenomena, including collision detection, friction, and momentum conservation.\n It was designed with performance and accuracy in mind, providing a foundational tool for game development and simulations. The project showcases advanced knowledge of C++ programming, mathematics, and physics principles." },
+    { id: 3, link: "", skills: ['visualstudio', 'github', 'tailwind', 'react', 'express', 'mongodb'], title: "Full-Stack Notes Application", date: "Feb.2024", description: "Developed a full-stack notes application that allows users to create, edit, organize, and delete notes. The front-end is built with React, while the back-end is powered by Node.js and Express. Data is stored in a MongoDB database, ensuring persistence and reliability. This project illustrates full-stack development capabilities and effective data management, providing a practical tool for personal or professional use." },
+    { id: 4, link: "", skills: ['visualstudio', 'github', 'tailwind', 'react'], title: "Portfolio", date: "Jun.2024", description: "Designed and developed a personal portfolio website to showcase projects, skills, and professional experience. The portfolio is built using modern web technologies such as HTML, CSS, JavaScript, and React, ensuring a visually appealing and user-friendly interface. The site includes sections for project descriptions, contact information, and a downloadable resume. This project highlights web development skills and attention to detail in UI/UX design." },
+    { id: 5, link: "", skills: ['visualstudio', 'github', 'tailwind', 'react', 'express', 'mongodb'], title: "Blogger Web Application", date: "Apr.2024", description: "Created a full-stack web application for blogging, enabling users to create, edit, and delete blog posts. The application provides a seamless user experience with a modern interface built using React on the front-end and Node.js with Express for the back-end. MongoDB is used as the database to store user data and blog content. This project demonstrates proficiency in full-stack development, user authentication, and CRUD operations." },
+    { id: 6, title: "E-Commerce Website", date: "Apr.2024", description: "..." },
+    { id: 7, title: "Tic-Tac-Toe Game", date: "Feb.2024", description: "..." },
+    { id: 8, title: "Weather App", date: "Feb.2024", description: "..." },
+    { id: 9, title: "To-Do List", date: "Feb.2024", description: "..." },
+    { id: 10, title: "Chat Application", date: "Feb.2024", description: "..." },
+    // ... add other projects
+];
+
+export default ProjectsData;

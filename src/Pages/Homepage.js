@@ -31,14 +31,16 @@ export default function Homepage() {
                 </ShaderGradientCanvas>
             </div>
             <div className='flex justify-between relative select-none'>
-                <div className='flex flex-col ml-8 mt-8 opacity-80'>
-                    <div className='font-extralight text-6xl select-none'>
-                        Bastien Youssfi
+                <div className='flex flex-col justify-between'>
+                    <div className='flex flex-col ml-8 mt-8 opacity-80'>
+                        <div className='font-extralight text-6xl select-none'>
+                            Bastien Youssfi
+                        </div>
+                        <div className='font-light text-sm select-none'>
+                            Full Stack Developer
+                        </div>
+                        <Navigation />
                     </div>
-                    <div className='font-light text-sm select-none'>
-                        Full Stack Developer
-                    </div>
-                    <Navigation />
                 </div>
 
                 {/* Sections */}

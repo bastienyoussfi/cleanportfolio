@@ -1,23 +1,11 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import ProjectDetails from '../Components/ProjectsDetails';
+import ProjectsData from '../Data/ProjectsData';
 
 export default function Projects() {
     const [selectedProject, setSelectedProject] = useState(null);
-
-    const projects = [
-        { id: 1, title: "LLMs Collective Intelligence", date: "Mar.2024", description: "..." },
-        { id: 2, title: "2D Physics Engine", date: "Feb.2024", description: "..." },
-        { id: 3, title: "Full-Stack Notes Application", date: "Feb.2024", description: "..." },
-        { id: 4, title: "Portfolio", date: "Jun.2024", description: "..." },
-        { id: 5, title: "Blogger Web Application", date: "Apr.2024", description: "..." },
-        { id: 6, title: "E-Commerce Website", date: "Apr.2024", description: "..." },
-        { id: 7, title: "Tic-Tac-Toe Game", date: "Feb.2024", description: "..." },
-        { id: 8, title: "Weather App", date: "Feb.2024", description: "..." },
-        { id: 9, title: "To-Do List", date: "Feb.2024", description: "..." },
-        { id: 10, title: "Chat Application", date: "Feb.2024", description: "..." },
-        // ... add other projects
-    ];
+    const projects = ProjectsData;
 
     const handleBack = () => {
         setSelectedProject(null);
