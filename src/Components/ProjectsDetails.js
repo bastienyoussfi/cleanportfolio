@@ -3,12 +3,12 @@ import { CiLink } from 'react-icons/ci';
 
 export default function ProjectDetails({ project, onBack }) {
     return (
-      <div className="relative p-16 ml-40  max-w-[700px]">
+      <div className="relative p-16 ml-40 max-w-[700px]">
         <button 
           onClick={onBack}
-          className="font-mono p text-white rounded mb-20"
+          className="font-montserrat font-normal hover:underline text-white rounded mb-20"
         >
-          [Back]
+          Back to projects
         </button>
         <div className="flex flex-col opacity-85 text-start mt-40">
           <div className="text-3xl">{project.title}</div>

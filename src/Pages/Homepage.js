@@ -8,8 +8,32 @@ import Projects from '../Sections/Projects'
 import Contact from '../Sections/Contact'
 import Blog from '../Sections/Blog'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import { CSSTransition } from 'react-transition-group';
 
 export default function Homepage() {
+    const [admireMode, setAdmireMode] = useState(false);
+
+    const toggleAdmireMode = () => {
+        setAdmireMode(true);
+      };
+
+    useEffect(() => {
+    const handleMouseMove = () => {
+        if (admireMode) {
+        setAdmireMode(false);
+        }
+    };
+    
+    if (admireMode) {
+        window.addEventListener('mousemove', handleMouseMove);
+    }
+    
+    return () => {
+        window.removeEventListener('mousemove', handleMouseMove);
+    };
+    }, [admireMode]);
     
     return (
         <Router>
@@ -30,27 +54,59 @@ export default function Homepage() {
                     </ShaderGradient>
                 </ShaderGradientCanvas>
             </div>
-            <div className='flex justify-between relative select-none'>
-                <div className='flex flex-col justify-between'>
-                    <div className='flex flex-col ml-8 mt-8 opacity-80'>
-                        <div className='font-extralight text-6xl select-none'>
-                            Bastien Youssfi
-                        </div>
-                        <div className='font-light text-sm select-none'>
-                            Full Stack Developer
-                        </div>
-                        <Navigation />
-                    </div>
+            <CSSTransition
+                in={!admireMode}
+                timeout={300}
+                classNames="fade"
+                unmountOnExit
+                >
+                <div className='flex justify-between relative select-none'>
+                    {!admireMode && (
+                        <>
+                            <div className='flex flex-col justify-between'>
+                                <div className='flex flex-col ml-8 mt-8 opacity-80'>
+                                    <div className='font-extralight xl:text-6xl text-xl select-none font-montserrat ml-[-6px] tracking-tight'>
+                                        Bastien Youssfi
+                                    </div>
+                                    <div className='font-light text-sm select-none'>
+                                        Full Stack Developer
+                                    </div>
+                                    <Navigation />
+                                    <button
+                                        className="relative mr-96 mt-[13px] font-bold text-xs hover:text-gray-400 hover:animate-pulse transition-all duration-300"
+                                        onClick={toggleAdmireMode}
+                                        >
+                                        <NavLink
+                                            to={'/admire'}
+                                            className=''
+                                        >
+                                            <div>Admire</div>
+                                            
+                                        </NavLink>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <Routes>
+                                <Route path="/" element={<Home />} />
+                                <Route path="/projects" element={<Projects />} />
+                                <Route path="/contact" element={<Contact />} />
+                                <Route path="/blog" element={<Blog />} />
+                            </Routes>
+                        </>
+                    )}
+                </div> 
+            </CSSTransition>
+            <CSSTransition
+                in={admireMode}
+                timeout={300}
+                classNames="fade"
+                unmountOnExit
+                >
+                <div className="absolute inset-0 flex mt-[820px] justify-center text-gray-400 opacity-75 text-xs">
+                    <p>Move your mouse to exit admire mode</p>
                 </div>
-
-                {/* Sections */}
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/projects" element={<Projects />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/blog" element={<Blog />} />
-                </Routes>
-            </div>
+                </CSSTransition>
         </div>
         </Router>
     )
