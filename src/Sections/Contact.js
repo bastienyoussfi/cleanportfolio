@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
     return (
-        <div className='relative right-20 lg:right-8 top-8 text-lg xl:text-xl'>
+        <div className='relative right-[130px] mt-[650px] xl:mt-0 lg:right-8 top-8 text-lg xl:text-xl'>
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 2 }}
+                transition={{ duration: 1.2 }}
                 exit={{ opacity: 0 }}
                 >
             <div className="flex flex-col gap-2 font-bold text-xl max-w-20 opacity-80">

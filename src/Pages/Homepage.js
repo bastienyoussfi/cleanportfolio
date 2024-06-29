@@ -37,7 +37,7 @@ export default function Homepage() {
     
     return (
         <Router>
-        <div className="fixed w-[calc(100%-4.5rem)] h-[calc(100%-4.5rem)] overflow-hidden left-9 top-9 right-9 bottom-9 text-white border border-opacity-80 border-gray-400">
+        <div className="fixed w-[calc(100%-40px)] xl:w-[calc(100%-4.5rem)] xl:h-[calc(100%-4.5rem)] overflow-hidden left-5 right-5 top-5 bottom-5 xl:left-9 xl:top-9 xl:right-9 xl:bottom-9 text-white border border-opacity-80 border-gray-400">
             <div className='opacity-60  z-[-1]'>
                 <ShaderGradientCanvas
                     importedFiber={{ ...fiber, ...drei, ...reactSpring }}
@@ -63,16 +63,16 @@ export default function Homepage() {
                 <div className='flex justify-between relative select-none'>
                     {!admireMode && (
                         <>
-                            <div className='flex flex-col ml-8 mt-8 opacity-80'>
-                                <div className='font-extralight xl:text-6xl text-xl select-none font-montserrat ml-[-6px] tracking-tight'>
+                            <div className='flex flex-col mt-4 ml-4 xl:ml-8 xl:mt-8 opacity-80'>
+                                <div className='font-extralight xl:text-6xl text-3xl select-none font-montserrat ml-[-3px] xl:ml-[-6px] tracking-tight'>
                                     Bastien Youssfi
                                 </div>
-                                <div className='font-light text-sm select-none'>
+                                <div className='font-extralight xl:text-sm text-xs select-none'>
                                     Full Stack Developer
                                 </div>
                                 <Navigation />
                                 <button
-                                    className="relative mr-96 mt-[13px] font-bold text-xs hover:text-gray-400 hover:animate-pulse transition-all duration-300"
+                                    className="relative mr-96 mt-[13px] font-bold text-[12px] xl:text-xs hover:text-gray-400 hover:animate-pulse transition-all duration-300"
                                     onClick={toggleAdmireMode}
                                     >
                                     <NavLink
@@ -83,6 +83,9 @@ export default function Homepage() {
                                         
                                     </NavLink>
                                 </button>
+                                <a href='resume.pdf' className='relative bottom-[-525px] text-white font-bold font text-[12px] xl:text-xs hover:text-gray-400 hover:animate-pulse transition-all duration-300 hover:cursor-pointer' download>
+                                    Download my resume
+                                </a>
                             </div>
                             
                             <Routes>

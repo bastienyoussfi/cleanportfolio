@@ -7,7 +7,7 @@ export default function Navigation() {
     const [selectedItem, setSelectedItem] = useState(navItems[0]);
     return (
         <nav className='mt-12 select-none'>
-            <ul className="flex flex-col font-bold font gap-3 text-xs max-w-10">
+            <ul className="flex flex-col font-bold font gap-3 text-[12px] xl:text-xs max-w-10">
             {navItems.map((item) => (
                 <li
                 key={item}
