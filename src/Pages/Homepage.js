@@ -63,28 +63,26 @@ export default function Homepage() {
                 <div className='flex justify-between relative select-none'>
                     {!admireMode && (
                         <>
-                            <div className='flex flex-col justify-between'>
-                                <div className='flex flex-col ml-8 mt-8 opacity-80'>
-                                    <div className='font-extralight xl:text-6xl text-xl select-none font-montserrat ml-[-6px] tracking-tight'>
-                                        Bastien Youssfi
-                                    </div>
-                                    <div className='font-light text-sm select-none'>
-                                        Full Stack Developer
-                                    </div>
-                                    <Navigation />
-                                    <button
-                                        className="relative mr-96 mt-[13px] font-bold text-xs hover:text-gray-400 hover:animate-pulse transition-all duration-300"
-                                        onClick={toggleAdmireMode}
-                                        >
-                                        <NavLink
-                                            to={'/admire'}
-                                            className=''
-                                        >
-                                            <div>Admire</div>
-                                            
-                                        </NavLink>
-                                    </button>
+                            <div className='flex flex-col ml-8 mt-8 opacity-80'>
+                                <div className='font-extralight xl:text-6xl text-xl select-none font-montserrat ml-[-6px] tracking-tight'>
+                                    Bastien Youssfi
                                 </div>
+                                <div className='font-light text-sm select-none'>
+                                    Full Stack Developer
+                                </div>
+                                <Navigation />
+                                <button
+                                    className="relative mr-96 mt-[13px] font-bold text-xs hover:text-gray-400 hover:animate-pulse transition-all duration-300"
+                                    onClick={toggleAdmireMode}
+                                    >
+                                    <NavLink
+                                        to={'/admire'}
+                                        className=''
+                                    >
+                                        <div>Admire</div>
+                                        
+                                    </NavLink>
+                                </button>
                             </div>
                             
                             <Routes>
@@ -106,7 +104,7 @@ export default function Homepage() {
                 <div className="absolute inset-0 flex mt-[820px] justify-center text-gray-400 opacity-75 text-xs">
                     <p>Move your mouse to exit admire mode</p>
                 </div>
-                </CSSTransition>
+            </CSSTransition>
         </div>
         </Router>
     )

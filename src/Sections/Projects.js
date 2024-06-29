@@ -11,7 +11,7 @@ export default function Projects() {
         setSelectedProject(null);
     };
     return (
-        <div className='relative min-h-screen opacity-80 bottom-0 right-[-17px] text-right mb-[110px] min-w-[70%] xl:min-w-[50%] overflow-y-scroll scroll-smooth'>
+        <div className='relative min-h-screen opacity-80 bottom-0 right-[-17px] text-right mb-[110px] min-w-[70%] xl:min-w-[60%] overflow-y-scroll scroll-smooth'>
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

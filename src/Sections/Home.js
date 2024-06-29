@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-import IconCloudDemo from '../Components/IconClouds';
-import DemoTextDistorted from '../Components/TextEffect';
 
 export default function Home() {
     return (

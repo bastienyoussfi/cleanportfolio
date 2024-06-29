@@ -3,7 +3,7 @@ import { CiLink } from 'react-icons/ci';
 
 export default function ProjectDetails({ project, onBack }) {
     return (
-      <div className="relative p-16 ml-40 max-w-[700px]">
+      <div className="relative p-16 ml-96 max-w-[700px]">
         <button 
           onClick={onBack}
           className="font-montserrat font-normal hover:underline text-white rounded mb-20"
